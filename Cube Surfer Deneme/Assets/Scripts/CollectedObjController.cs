@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectedObjController : MonoBehaviour
 {
@@ -29,10 +30,11 @@ public class CollectedObjController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (playerManager.lives == 0)
+        if (playerManager.lives <= 0)
         {
             playerManager.llevelState = 0;
             Debug.Log("GameOver");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
 
@@ -121,7 +123,7 @@ public class CollectedObjController : MonoBehaviour
         {
             Debug.Log("Completed!!!");
             playerManager.llevelState = 0;
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
 
