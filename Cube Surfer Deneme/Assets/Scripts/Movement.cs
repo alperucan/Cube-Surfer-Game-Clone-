@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
                 if (isTouching)
                 {
 
-                    zAxis += Input.GetAxis("Mouse X") * controlSpeed * Time.fixedDeltaTime;
+                    zAxis -= Input.GetAxis("Mouse X") * controlSpeed * Time.fixedDeltaTime;
                     //sinirlari belirledim
                     if (zAxis < 182.5f)
                     {

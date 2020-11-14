@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class CollectedObjController : MonoBehaviour
 {
     PlayerManager playerManager;
-
-   
+    //[SerializeField]
+    //Animator anim;
 
     //  GameObject lastGameObject;
     // Start is called before the first frame update
     void Start()
     {
         playerManager = GameObject.FindGameObjectWithTag("PlayerManager").GetComponent<PlayerManager>();
-
+        
         if (GetComponent<Rigidbody>() == null)
         {
             gameObject.AddComponent<Rigidbody>();
@@ -73,7 +73,7 @@ public class CollectedObjController : MonoBehaviour
             if (!playerManager.collidedList.Contains(other.gameObject))
             {
                 other.gameObject.tag = "null";
-                Destroy(gameObject, 0.15f);
+                Destroy(gameObject);
                 playerManager.collidedList.Remove(gameObject);
                 playerManager.collectedPoolTransform.position = new Vector3(playerManager.collectedPoolTransform.position.x, playerManager.collectedPoolTransform.position.y - 1f, playerManager.collectedPoolTransform.position.z);
                 //  Debug.Log("wallBlock: " + playerManager.collectedPoolTransform.position.y);
@@ -87,7 +87,7 @@ public class CollectedObjController : MonoBehaviour
             if (!playerManager.collidedList.Contains(other.gameObject))
             {
                 other.gameObject.tag = "null";
-                Destroy(gameObject, 0.15f);
+                Destroy(gameObject);
                 playerManager.collidedList.Remove(gameObject);
                 playerManager.collectedPoolTransform.position = new Vector3(playerManager.collectedPoolTransform.position.x, playerManager.collectedPoolTransform.position.y - 1f, playerManager.collectedPoolTransform.position.z);
                 // Debug.Log("lavaBlock: " + playerManager.collectedPoolTransform.position.y);
@@ -104,7 +104,7 @@ public class CollectedObjController : MonoBehaviour
             if (!playerManager.collidedList.Contains(other.gameObject))
             {
                 other.gameObject.tag = "null";
-                Destroy(gameObject, 0.15f);
+                Destroy(gameObject);
                 playerManager.collidedList.Remove(gameObject);
                 playerManager.collectedPoolTransform.position = new Vector3(playerManager.collectedPoolTransform.position.x, playerManager.collectedPoolTransform.position.y - 1f, playerManager.collectedPoolTransform.position.z);
                 //   Debug.Log("Finish: " + playerManager.collectedPoolTransform.position.y);
@@ -133,7 +133,8 @@ public class CollectedObjController : MonoBehaviour
         {
             Debug.Log("Completed!!!");
             playerManager.llevelState = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
+           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
 
