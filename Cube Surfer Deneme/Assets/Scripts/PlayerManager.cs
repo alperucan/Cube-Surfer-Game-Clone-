@@ -24,9 +24,16 @@ public class PlayerManager : MonoBehaviour
     public int llevelState = 1;
 
     [SerializeField]
+    public bool isRotated ;
+
+    [SerializeField]
     public int pplayerState = 0;
     // Start is called before the first frame update
 
+    public void Start()
+    {
+        isRotated = false;
+    }
     private void Update()
     {
         GetInput();

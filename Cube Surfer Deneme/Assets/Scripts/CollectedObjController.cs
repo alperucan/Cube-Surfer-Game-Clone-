@@ -61,6 +61,7 @@ public class CollectedObjController : MonoBehaviour
                 other.transform.parent = playerManager.collectedPoolTransform;
                 other.gameObject.AddComponent<CollectedObjController>();
                 playerManager.lives++;
+               
                 playerManager.down++;
              
             }
@@ -77,6 +78,7 @@ public class CollectedObjController : MonoBehaviour
                 playerManager.collectedPoolTransform.position = new Vector3(playerManager.collectedPoolTransform.position.x, playerManager.collectedPoolTransform.position.y - 1f, playerManager.collectedPoolTransform.position.z);
                 //  Debug.Log("wallBlock: " + playerManager.collectedPoolTransform.position.y);
                 playerManager.lives--;
+               
                 return;
             }
         }
@@ -90,6 +92,7 @@ public class CollectedObjController : MonoBehaviour
                 playerManager.collectedPoolTransform.position = new Vector3(playerManager.collectedPoolTransform.position.x, playerManager.collectedPoolTransform.position.y - 1f, playerManager.collectedPoolTransform.position.z);
                 // Debug.Log("lavaBlock: " + playerManager.collectedPoolTransform.position.y);
                 playerManager.lives--;
+               
 
                 return;
             }
@@ -106,6 +109,7 @@ public class CollectedObjController : MonoBehaviour
                 playerManager.collectedPoolTransform.position = new Vector3(playerManager.collectedPoolTransform.position.x, playerManager.collectedPoolTransform.position.y - 1f, playerManager.collectedPoolTransform.position.z);
                 //   Debug.Log("Finish: " + playerManager.collectedPoolTransform.position.y);
                 playerManager.lives--;
+                
                 return;
             }
 
@@ -117,6 +121,12 @@ public class CollectedObjController : MonoBehaviour
             playerManager.coins++;
             playerManager.uIManager.UpdateCoinDisplay(playerManager.coins);
 
+        }
+        if (other.gameObject.CompareTag("Rotater"))
+        {
+           // Debug.Log("Rotater!!!");
+            playerManager.collectedPoolTransform.rotation = Quaternion.Euler(0,90,0);
+            playerManager.isRotated = true;
         }
 
         if (other.gameObject.CompareTag("FinishLine"))

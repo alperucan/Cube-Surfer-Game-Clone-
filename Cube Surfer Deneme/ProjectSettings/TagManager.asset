@@ -12,6 +12,7 @@ TagManager:
   - null
   - Coin
   - FinishLine
+  - Rotater
   layers:
   - Default
   - TransparentFX
