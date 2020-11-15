@@ -22,7 +22,7 @@ public class Anime : MonoBehaviour
         if (playerManager.llevelState == 0)
         {
             
-           // gameObject.transform.position = new Vector3(target.position.x+1f,transform.position.y,target.position.z);
+            gameObject.transform.position = new Vector3(target.position.x+1f,transform.position.y,target.position.z);
             anim.SetInteger("Jump",1);
         }
     }

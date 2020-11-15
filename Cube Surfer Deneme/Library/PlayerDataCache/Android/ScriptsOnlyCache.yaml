@@ -21,6 +21,7 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.Timeline.Editor.dll:
     - UnityEditor.Timeline.SequenceHierarchy
+    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.AnimationTrack
@@ -94,27 +95,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13284}
     - Class: 114
-      Script: {instanceID: 61982}
+      Script: {instanceID: 44122}
     - Class: 114
-      Script: {instanceID: 61984}
+      Script: {instanceID: 44124}
     - Class: 114
-      Script: {instanceID: 61986}
+      Script: {instanceID: 44126}
     - Class: 114
-      Script: {instanceID: 61988}
+      Script: {instanceID: 44128}
     - Class: 114
-      Script: {instanceID: 61990}
+      Script: {instanceID: 44130}
     - Class: 114
-      Script: {instanceID: 61992}
+      Script: {instanceID: 44132}
     - Class: 114
-      Script: {instanceID: 61994}
+      Script: {instanceID: 44134}
     - Class: 114
-      Script: {instanceID: 61996}
+      Script: {instanceID: 44136}
     - Class: 114
-      Script: {instanceID: 61998}
+      Script: {instanceID: 44138}
     - Class: 114
-      Script: {instanceID: 62000}
+      Script: {instanceID: 44140}
     - Class: 114
-      Script: {instanceID: 62002}
+      Script: {instanceID: 44142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -157,6 +158,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 90
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -211,7 +214,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13318}
     - Class: 114
-      Script: {instanceID: 14330}
+      Script: {instanceID: 14328}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
